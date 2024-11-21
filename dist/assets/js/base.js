@@ -6,6 +6,7 @@
 //    * 背景透過
 //    * navメニュー表示
 //    */
+
 $(".global").click(function () {
   $(".global span").toggleClass("is-active");
   $(".global__menu").toggleClass("is-active");

@@ -117,9 +117,12 @@ const cssSass = () => {
 const jsBabel = () => {
   return src(srcPath.js)
     .pipe(
-      plumber({
-        errorHandler: notify.onError("Error: <%= error.message %>"),
-      })
+      plumber(
+        //エラーが出ても処理を止めない
+        {
+          errorHandler: notify.onError("Error: <%= error.message %>"),
+        }
+      )
     )
     .pipe(
       babel({
@@ -131,7 +134,6 @@ const jsBabel = () => {
     .pipe(rename({ extname: ".min.js" }))
     .pipe(dest(destPath.js));
 };
-
 
 //画像圧縮（デフォルトの設定）
 const imgImagemin = () => {

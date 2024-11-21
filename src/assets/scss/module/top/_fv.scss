@@ -7,10 +7,14 @@
     background: $main-color;
     height: 90vh;
     width: 100%;
-    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
     position: relative;
     margin-top: 100px;
-    overflow: hidden;
+    
+
+    @include mq() {
+        height: 70vh;
+        overflow: hidden;
+    }
 
     &::after {
         position: absolute;
@@ -20,16 +24,19 @@
         bottom: 0;
         left: 0;
         background: #fff;
-        transform: skewY(7deg) translateY(100px);
+        transform: skewY(5deg) translateY(100px);
         background-image:
         radial-gradient($main-color 3%, transparent 3%),
         radial-gradient($main-color 2%, transparent 2%);
         background-size: 40px 40px;
         background-position: 0 0, 20px 20px;
+
+        @include mq() {
+
+            bottom: 5px;
+        }
     }
-    @include mq() {
-        height: 70vh;
-    }
+    
     
     &__bg {
 
@@ -39,7 +46,7 @@
         position: absolute;
         top: 10%;
         left: 15%;
-        z-index: 100;
+        z-index: 30;
         width: 35%;
 
         @include mq() {

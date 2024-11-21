@@ -4,6 +4,9 @@
 //    * 背景透過
 //    * navメニュー表示
 //    */
+
+
+
 $(".global").click(function () {
     $(".global span").toggleClass("is-active");
     $(".global__menu").toggleClass("is-active");
@@ -16,6 +19,9 @@ $(".global").click(function () {
         $("body").removeClass("no-scroll");
     }
 });
+
+
+
 
 $(document).ready(function() {
     // スクロールイベントを監視

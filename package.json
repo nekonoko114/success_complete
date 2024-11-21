@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "dev": "gulp", 
+  "build": "gulp build"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -40,5 +41,8 @@
     "ie >= 11",
     "Android >= 4",
     "ios_saf >= 8"
-  ]
+  ],
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
 }

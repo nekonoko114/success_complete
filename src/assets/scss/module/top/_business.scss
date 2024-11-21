@@ -1,0 +1,307 @@
+@use "../color" as *;
+@use "../mixin" as *;
+@use "../setting" as *;
+@use "../variable" as *;
+
+
+
+.business {
+    // margin-bottom: 200px;
+
+    @include mq() {
+        margin-bottom: 0;
+    }
+    &__list {
+        padding: 300px 30px 300px;
+        clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include mq() {
+            padding: 200px 20px;
+            flex-direction: column;
+            clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+        }
+
+        &::after {
+            
+        }
+        
+        // 奇数のとき
+        &:nth-child(odd) {
+
+
+            .business__list__wrap__right {
+                color: $main-color; // 奇数のときのテキスト色
+                
+            }
+            
+            .business__list__wrap__img::before {
+                background: $main-color; // 奇数のときの装飾色
+                transform:scale(-1 , 1);
+            }
+            .business__list__wrap__img {
+                transform:scale(-1 , 1);
+
+            }
+            .business__list__wrap__img span {
+                transform:scale(-1 , 1);
+                right: 70%;
+
+            }
+
+            
+        }
+        
+        // 偶数のとき
+        &:nth-child(even) {
+            // justify-content: end;
+            background: $main-color;
+            flex-direction: row-reverse;
+
+            @include mq() {
+                flex-direction: column;
+            }
+
+            .business__list__wrap__ttl {
+                color: $rich-font;
+                text-align: right;
+            }
+            .business__list__wrap__sttl {
+                color: $rich-font;
+                text-align: right;
+            }
+
+            // テキストや装飾の色を変更
+            .business__list__wrap__right {
+                color: $rich-font; // 偶数のときのテキスト色
+            }
+            .business__list__wrap__img::before {
+                background: $rich-font; // 偶数のときの装飾色
+                
+            }
+            .business__list__decoration {
+                left: 0;
+            }
+
+            .business__list__wrap__img span {
+                color: $main-color;
+                // transform:scale(-1 , 1);   
+                right: 0;
+            }
+
+            .business__list__wrap__img {
+                
+                // transform:scale(-1 , 1);   
+            }
+        }
+        &:nth-of-type(3) {
+            background: $soft-beige;
+        }
+        &:nth-of-type(7) {
+            
+            background: $soft-beige;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 300px;
+                left: 0;
+                bottom: -200px;
+                background: $soft-beige;
+
+            }
+        }
+
+        &__wrap {
+            
+            &__left {
+                width: 100%;
+                padding: 20px;
+            }
+
+            &__ttl {
+                margin-bottom: 8px;
+
+                &:nth-child(even) {
+                    text-align: right;
+                }
+            }
+
+            &__sttl {
+                margin-bottom: 20px;
+            }
+
+            &__img {
+                width: 100%;
+                position: relative;
+
+                @include mq() {
+                    width: 300px;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    right: -50px;
+                    bottom: -50px;
+                    background: $main-color;
+                    z-index: -1;
+
+                    @include mq() {
+                        right: -10px;
+                        bottom: -20px;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    right: 0;
+                    bottom: -30px;
+                    color: $rich-font;
+
+                    &:hover strong {
+                        transform: translateX(20px);
+                    }
+
+                    @include mq() {
+                        bottom: -15px;
+                        font-size: 12px;
+                        
+                    }
+
+                    strong {
+                        display: inline-block;
+                        margin-left: 10px;
+                        transition: all 0.6s ease 0s;
+                        // transform: translateX(100px);
+                    }
+                }
+
+                img {
+                    transform: scale(-1, 1);
+                }
+            }
+
+            &__right {
+                margin-top: 50px;
+                width: 42%;
+                @include mq() {
+                    width: 80%;
+                    margin: 0  auto;
+                }
+
+                @include mq() {
+                    margin-top: 10px;
+                }
+
+                &__sttl {
+                    font-size: 32px;
+                    color: $rich-font;
+                    margin: 60px 0 40px;
+
+                    @include mq() {
+                        font-size: 18px;
+                        margin: 30px 0 20px;
+                    }
+                }
+
+                &__txt {
+                    width: 410px;
+                    font-weight: normal;
+
+                    strong {
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+
+                    @include mq() {
+                        strong {
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                    }
+
+                    @include mq() {
+                        width: 100%;
+                        margin: 0  auto;
+                        font-size: 16px;
+                    }
+                }
+
+            }
+        }
+
+        &__decoration {
+            position: fixed;
+            // position: absolute;
+            height: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            writing-mode: vertical-lr;
+            font-size: 24px;
+            color: $rich-font;
+            opacity: 0.7;
+            text-align: center;
+            text-shadow: 0px 20px 8px rgba(199, 185, 148, 0.4);
+            z-index: 200;            
+            font-size: 32px;
+            @include mq() {
+                opacity: 0.5;
+                font-size: 24px;
+                right: 0;
+                
+            }
+        }
+    }
+}
+
+
+.center-diagonal {
+    width: 100%;
+    // height: 400px;
+    position: relative;
+    background-attachment: fixed;
+    img {
+        // height: 400px;
+        width: 100%;
+        object-fit: cover;
+        background-attachment: fixed;
+        object-position: center center;
+        vertical-align: middle;
+    }
+    
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 0, 0 25%, 100% 0);
+        background: #fff;
+    }
+
+    &::before {
+        top: -1px;
+        left: 0;
+        clip-path: polygon(0 0, 0 25%, 100% 0);
+    }
+    &::after {
+        bottom: -1px;
+        right: 0;
+        clip-path: polygon(0 100%, 100% 100%, 75% 78%);
+        
+    }
+    img {
+    
+    }
+
+    
+
+}

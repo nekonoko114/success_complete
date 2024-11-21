@@ -1,0 +1,78 @@
+@use "../color" as *;
+@use "../mixin" as *;
+@use "../setting" as *;
+@use "../variable" as *;
+
+
+.topContact {
+    background: $main-color;
+    position: relative;
+    // overflow: hidden;
+    @include mq() {
+        margin-top: 300px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 150px;
+        left: 0;
+        top: -10%;
+        transform: skewY(-4deg);
+        
+        
+        background: $main-color;
+
+        @include mq() {
+            top: -5%;
+            height: 50px;
+        }
+
+    }
+
+    &__wrapper {
+        text-align: center;
+        padding: 100px 40px 100px;
+    }
+
+    &__ttl {
+        font-size: 72px;
+        color: $rich-font;
+
+        @include mq() {
+            font-size: 48px;
+        }
+    }
+
+    &__message {
+        color: #fff;
+        font-size: 14px;
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        
+        // @include btn($bg: $main-color,  $color : #Fff); 
+        a {
+            @include btn($bg: $main-color,  $color : #Fff); 
+            border: 1px solid #fff;
+            padding: 24px 130px;
+
+            @include mq() {
+                padding: 18px 80px;
+            }
+        }
+
+    }
+
+    &__tell {
+        margin-top: 40px;
+        text-align: center;
+        a {
+            font-size: 16px;
+            color: #fff;
+            // border: 1px solid #fff;
+        }   
+    }
+}

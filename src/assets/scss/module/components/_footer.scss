@@ -1,0 +1,105 @@
+@use "../setting" as *;
+@use "../mixin" as *;
+@use "../color" as *;
+@use "../variable" as *;
+
+.footer {
+    background: $main-color;
+    color: #fff;
+    padding: 40px;
+    @include mq() {
+        // padding: 20px;
+    }
+
+    &__inner {
+        padding: 50px;
+
+        @include mq() {
+            padding: 0;
+        }
+    }
+
+    // Flexで3分割
+    &__flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch; // 高さを揃える
+
+        @include mq() {
+            flex-direction: column;
+        }
+    }
+
+    // left
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // 上下に配置
+
+        &__link {
+            vertical-align: top;
+            a {
+                color: #fff;
+            }
+        }
+
+        &__copy {
+            // 下に配置されるようになります
+        }
+    }
+
+    // center
+    &__center {
+        &__access,
+        &__address,
+        &__tell,
+        &__business__hours{
+            margin-bottom: 40px;
+        }
+
+        &__address {
+            line-height: 1.5;
+        }
+    }
+
+    // right デザイン専用のクラス
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // 上下に配置
+        text-align: center;
+
+        @include mq() {
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-top: 30px;
+        }
+        &__link {
+
+            @include mq() {
+                width: calc(100% / 2 - 8px);
+                margin: 4px;
+                border: 1px solid #fff;
+            }
+            a {
+                color: #fff;
+
+                @include mq() {
+                    display: inline-block;
+                    padding: 10px;
+                }
+            }
+        }
+
+        
+    }
+
+    &__copy {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+}
+
+

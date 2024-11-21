@@ -1,0 +1,208 @@
+@use "../color" as *;
+@use "../mixin" as *;
+@use "../setting" as *;
+@use "../variable" as *;
+
+
+.greeting {
+    // margin: 100px 0 300px;
+    padding: 200px;
+    background-image:
+    radial-gradient($main-color 3%, transparent 3%),
+    radial-gradient($main-color 2%, transparent 2%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+    position: relative;
+
+    @include mq() {
+        padding: 20px;
+    }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 200px;
+    left: 0;
+    bottom: 20%;
+    overflow: hidden;
+
+    @include mq() {
+        height: 100px;
+    }
+    
+  }
+
+    &::before {
+        bottom: 25%;
+        background: $main-color;
+        z-index: -1;
+        transform: skewY(-7deg);
+
+        @include mq() {
+            bottom: 55%;
+        }
+    }
+    &::after {
+        
+        background: $rich-font;
+        z-index: -2;
+        transform: skewY(-7deg);
+        @include mq() {
+            bottom: 50%;
+        }
+    }
+
+    @include mq() {
+        margin: 100px 0 100px;
+    }
+    &__wrapper {
+        
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: center;
+
+        @include mq() {
+         flex-direction: column-reverse;   
+        }
+
+    }
+
+    &__content {
+        text-align: center;
+
+
+        @include mq() {
+            // text-align: center;
+        }
+    }
+
+    &__ttl {
+        font-size: 32px;
+        margin-bottom: 60px;
+        color: $rich-font;
+
+        @include mq() {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        span {
+            font-size: 18px;
+            // font-family: $ff-lavishly-yours;
+            
+        }
+    }
+
+    &__txt {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @include mq() {
+            font-size: 32px;   
+        }
+    }
+
+    &__img {
+        width: 300px;
+        // height: 500px;
+        
+        margin-left: 50px;;
+
+        @include mq() {
+            width: 200px;
+            height: 300px;
+            margin: 20px auto 80px;
+            text-align: center; 
+        }
+
+    
+        img {
+            border-top: 5px solid $main-color;
+            border-right: 5px solid $main-color;
+            border-bottom: 5px solid $rich-font;
+            border-left: 5px solid $rich-font;
+            // border-top: 5px solid $main-color;
+            border-radius: 10%;
+        }
+
+        
+    }
+
+    &__btn {
+        margin-top: 40px;
+        a {
+        position: relative;
+        
+        span {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.4s ease 0s;           
+            font-size: 24px;
+        }
+
+        &:hover{
+            
+            span {
+                
+                transform: translate(20px, -50%);
+            }
+        }
+        }
+
+        
+    }
+}
+
+.left-diagonal {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    vertical-align: top;
+
+    @include mq() {
+        height: 200px;       
+    }
+    
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 330px;
+        background: #fff;
+        top: -10px;
+        left: 0;
+        clip-path: polygon(100% 0, 0 47%, 0 3%, 100% 0);
+
+        background-image:
+        radial-gradient($main-color 3%, transparent 3%),
+        radial-gradient($main-color 2%, transparent 2%);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+
+        @include mq() {
+            height: 220px;   
+        }
+    
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 330px;
+        background: $main-color;
+        bottom: -10px;
+        left: 0;
+        clip-path: polygon(0 100%, 100% 53%, 100% 97%, 0% 100%);
+        @include mq() {
+            height: 220px;   
+        }
+    
+    }
+
+    
+}

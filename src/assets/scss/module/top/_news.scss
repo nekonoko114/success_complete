@@ -1,0 +1,128 @@
+@use "../color" as *;
+@use "../mixin" as *;
+@use "../setting" as *;
+@use "../variable" as *;
+
+
+.news {
+    margin: 100px 0 30%;
+    width: 100%;
+
+    @include mq() {
+        margin: 50px 0 0;
+    }
+
+    &__ttl {
+        font-size: 72px;
+        padding-left: 120px;
+        position: relative;
+
+        @include mq() {
+            font-size: 40px;
+            padding-left: 60px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 2px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $main-color;
+            
+
+            @include mq() {
+                width: 50px;
+            }
+        }
+    }
+
+
+    &__sttl {
+        font-size: 24px;
+        padding-left: 120px;
+        content: none;
+    }
+
+    &__list {
+        width: 70%;
+        margin: 100px auto;
+        
+        
+    }
+
+    &__dl {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        position: relative;
+        @include mq() {
+            flex-direction: column;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: calc(100% + 400px);
+            height: 1px;
+            left: -200px;
+            bottom: -30%;
+            background: $main-color;
+
+            @include mq() {
+                width: calc(100% + 100px);
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -30%;
+            }
+        }
+    }
+
+    &__dt {
+        width: 300px;
+        margin-bottom: 40px;
+        @include mq() {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+    }
+
+    &__dd {
+        width: calc(100% - 400px);
+
+        @include mq() {
+            width: 100%;
+        }
+        &__category {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 8px 16px;
+            border: 1px solid red;
+            font-size: 12px;
+            border-radius: 4px;
+            color: red;
+
+            @include mq() {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__ttl {
+            margin-bottom: 20px;
+            @include mq() {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__txt {
+            margin-bottom: 20px;
+            @include mq() {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+}

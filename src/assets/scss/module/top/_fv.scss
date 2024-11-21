@@ -1,0 +1,93 @@
+@use "../color" as *;
+@use "../mixin" as *;
+@use "../setting" as *;
+@use "../variable" as *;
+
+.fv{
+    background: $main-color;
+    height: 90vh;
+    width: 100%;
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    position: relative;
+    margin-top: 100px;
+    overflow: hidden;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 200px;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        transform: skewY(7deg) translateY(100px);
+        background-image:
+        radial-gradient($main-color 3%, transparent 3%),
+        radial-gradient($main-color 2%, transparent 2%);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+    }
+    @include mq() {
+        height: 70vh;
+    }
+    
+    &__bg {
+
+    }
+
+    &__img {
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        z-index: 100;
+        width: 35%;
+
+        @include mq() {
+            width: 80%;
+            left: 0;
+        }
+    }
+
+    &__img,
+    &__content {
+        opacity: 0; // 初期状態は透明
+        transform: translateY(20px); // 少し下にずらして配置
+        transition: opacity 0.6s ease, transform 0.6s ease; 
+
+        &.is-visible {
+            opacity: 1; // 表示状態
+            transform: translateY(0); // 元の位置に戻る
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 40%;
+        right: 10%;
+        transform: translateY(-40%);
+
+        
+
+        @include mq() {
+            top: 50%;
+            right: 10%;
+            transform: translateY(-20%);
+        }
+
+        &__ttl {
+            color: $rich-font;
+            font-size: 64px;
+            text-align: right;
+            
+
+            @include mq() {
+                font-size: 32px;
+            }
+        }
+
+    }
+
+    
+    
+
+  }

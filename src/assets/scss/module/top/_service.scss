@@ -1,0 +1,246 @@
+@use "../color" as *;
+@use "../mixin" as *;
+@use "../setting" as *;
+@use "../variable" as *;
+
+
+.service {
+    background: $main-color;
+    width: 100%;
+    position: relative;
+    
+    &__wrapper {
+        padding: 160px 40px 160px 80px;
+
+        @include mq() {
+            padding: 160px 10px 160px 10px;
+        }
+
+    }
+
+    &__ttl {
+        // margin-top: 160px;
+        font-size: 64px;
+        color: $rich-font;
+        
+
+        @include mq() {
+            font-size: 32px;
+        }
+    }
+
+    &__subttl {
+        color: $rich-font;
+        font-size: 32px;
+        margin-left: 20px;
+
+        @include mq() {
+            font-size: 18px;
+        }
+    }
+
+    &__lists {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        // justify-content: space-around;
+    }
+
+    &__list {
+        width: calc(100% / 3 - 40px);
+        margin: 20px;
+        background: #FBF7EA;
+        padding-bottom: 80px;
+
+        @include mq() {
+            font-size: 32px;
+            margin: 8px;
+            width: calc(100% / 2 - 16px);
+            height: auto;
+        }
+        &:nth-child(4n + 1) {
+            margin: 20px;
+
+            @include mq() {
+                margin: 8px;
+            }
+            
+        }
+        &__head {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            background: #1B435D;
+            position: relative;
+            padding: 120px 0;
+
+            @include mq() {
+                height: 100px;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100px;
+                left: 0;
+                bottom: -99px;
+                background: #1B435D;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 80%);
+
+                @include mq() {
+                    clip-path: polygon(0 0, 100% 0, 100% 0, 0 60%);
+                }
+            }
+
+            &__ttl,
+            &__sttl {
+                color: $rich-font;
+
+            }
+
+            &__ttl{
+                font-size: 24px;
+                margin-bottom: 16px;
+
+                @include mq() {
+                    font-size: 18px;
+                }
+            }
+            
+            &__sttl {
+                font-size: 16px;
+                @include mq() {
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+
+        &__body {
+            padding: 70px 20px 20px 20px;
+            // padding: 20px;
+
+            @include mq() {
+                padding: 55px 4px 10px 4px;
+            }
+
+            
+            &__sttl {
+                font-size: 12px;
+                margin-bottom: 16px;
+
+                @include mq() {
+                    font-size: 10px;
+                    text-align: center;
+                    margin-bottom: 8px;
+                }
+            }
+
+            &__ttl {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 24px;
+
+                @include mq() {
+                    font-size: 16px;
+                    text-align: center;
+                    margin-bottom: 8px;
+                }
+            }
+
+            &__txt {
+                font-size: 16px;
+
+                @include mq() {
+                    font-size: 12px;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+            }
+
+             &__link {
+                display: inline-block;
+                padding: 10px;
+                transition:  all 0.3s ease 0s;
+                transform: translateX(0);
+                width: 100%;
+                text-align: right;
+               &:hover {
+                transform: translateX(10px);
+               } 
+             }
+            
+        }
+
+    }
+
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px); // 右からスライドイン
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.service__list {
+    
+    // transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+
+
+
+.service__ttl,
+.service__subttl {
+    opacity: 0; // 初期状態は非表示
+    visibility: hidden; // 完全に非表示にする
+    overflow: hidden; // アニメーション中にテキストがはみ出さないようにする
+    display: block; // ブロック要素にして縦に配置
+    transition: opacity 0.6s ease; // 表示をスムーズに
+}
+
+
+.second-diagonal {
+    width: 100%;
+    height: 700px;
+    
+    @include bg-img($path: '../images/top/dark-service-bg.jpg');
+    
+    // background-attachment: fixed;
+    position: relative;
+    
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #fff;
+        
+    } 
+
+    &::before {
+        clip-path: polygon(0 0, 0 25%, 100% 0);
+    }
+
+    &::after {
+        clip-path: polygon(0 100%, 0 75%, 100% 100%);
+    }
+
+
+    @include mq() {
+        height: 300px;
+    }
+    
+}

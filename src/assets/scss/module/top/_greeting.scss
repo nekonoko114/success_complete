@@ -58,34 +58,6 @@
         
     }
 
-    &__pickUp {
-        text-align: right;
-
-        @include mq() {
-            text-align: center;
-        }
-
-        &__txt {
-            font-size: 32px;
-            margin-bottom: 20px;
-
-            @include mq() {
-                font-size: 18px;
-                margin-bottom: 12px;
-            }
-            span {
-                font-size: 64px;
-                margin-right: 20px;
-                color: red;
-
-                @include mq() {
-                    font-size: 32px;
-                    margin-right: 4px;
-                }
-            }
-        }
-    }
-
     &__flex {
         margin-top: 120px;
         display: flex;
@@ -99,6 +71,7 @@
 
     &__content {
         text-align: center;
+
 
 
         @include mq() {

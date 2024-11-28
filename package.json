@@ -1,12 +1,11 @@
 {
   "name": "gulp-template",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-  "dev": "gulp", 
-  "build": "gulp build"
-},
+    "dev": "gulp",
+    "build": "gulp build"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -44,5 +43,14 @@
   ],
   "dependencies": {
     "gsap": "^3.12.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nekonoko114/success_complete.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nekonoko114/success_complete/issues"
+  },
+  "homepage": "https://github.com/nekonoko114/success_complete#readme",
+  "description": ""
 }

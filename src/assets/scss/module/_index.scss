@@ -10,7 +10,6 @@
 //sectionエリア内のスタイル各自それぞれのスタイル
 
 //topページの読み込み
-
 @use "./top/fv";
 @use "./top/greeting";
 @use "./top/service";
@@ -18,3 +17,7 @@
 @use "./top/news";
 @use "./top/topContact";
 
+
+//greetingページのscss
+@use "./greeting-page/greeting-top";
+@use "./about/aboutPage";

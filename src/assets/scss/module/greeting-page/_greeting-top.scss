@@ -1,0 +1,316 @@
+@use "../color" as *;
+@use "../mixin" as *;
+@use "../setting" as *;
+@use "../variable" as *;
+
+
+
+
+.greetingTop {
+    padding: 120px 0 0;
+    margin-bottom: 200px;
+    overflow: hidden;
+    &__wrapper {
+        max-width: 1600px;
+        margin: 0 auto;
+
+    }
+
+    &__area {
+        margin-left: 120px;
+        position: relative;
+        text-shadow: 2px 3px 3px rgba(255, 255, 255, 0.9);
+        height: 450px;
+        margin-bottom: 200px;
+
+        @include mq() {
+            margin-left: 10px;
+            margin-bottom: 20px;
+            height: 250px;
+        }
+        
+        &::after {
+            position: absolute;
+            content: "";
+            width: 203%;
+            height: 50px;
+            left: 0;
+            bottom: 0;
+            transform: translate(-50%, 0%) skewy(-5deg);
+            z-index: -2;
+            background: $main-color;
+            opacity: .9;
+
+            @include mq() {
+                width: 120%;
+                transform: skewY(-7deg);
+                bottom: 30%;
+                left: -20%;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 203%;
+            height: 10px;
+            left: 0;
+            bottom: 10%;
+            transform: translate(-50%, 0%) skewy(5deg);
+            z-index: -1;
+            background: $rich-font;
+            opacity: .9;
+            @include mq() {
+                width: 120%;
+                transform: skewY(7deg);
+                bottom: 30%;
+                left: -20%;
+            }
+        }
+    }
+
+    &__sttl {
+        font-size: 2rem;
+
+        @include mq() {
+            font-size: 1.5rem;
+        }
+
+    }
+
+    &__ttl {
+        font-size: 64px;
+        position: relative;
+        @include mq() {
+            font-size: 3rem;
+        }
+
+        &::after {
+            position: absolute;
+            content: "VOICE";
+            font-size: 160px;
+            color: $rich-font;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.1;
+            @include mq("pc") {
+                right: 30%;
+            }
+
+            @include mq() {
+                font-size: 7rem;
+                right: 10%;
+            }
+
+        }
+        
+    }
+
+    &__catch {
+        display: flex;
+        border: 1px solid #333;
+        position: relative;
+        
+
+        @include mq() {
+            display: block;
+            
+        }
+
+        &__img {
+            padding-bottom: 20px;
+            width: 50%;
+            position: relative;
+
+            @include mq() {
+                width: 100%;
+                padding-bottom: 180px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.2;
+                z-index: -1;
+            }
+            img {
+                height: 550px;
+                object-fit: cover;
+                object-position: 75% bottom;
+            }
+        }
+
+        &__wrap {
+            position: absolute;
+            top: 63%;
+            transform: translateY(-50%);
+            left: 10px;
+            z-index: 10;
+
+            @include mq() {
+                top: 65%;   
+            }
+        }
+
+        &__smessage,&__message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+
+            @include mq() {
+                font-size: 20px;
+            }
+        }
+
+        &__message {        
+            span { 
+                margin-bottom: 16px;
+                padding-bottom: 4px;
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+        &__txt {
+            margin-top: 40px;
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            @include mq("pc") {
+                margin-top: 120px;
+            }
+            @include mq() {
+                font-size: 24px;
+                // bottom: 0;
+            }
+            small{
+                margin-left: 12px;
+            }
+
+            &-large {
+                font-size: 4.5rem;
+                margin-bottom: 20px;
+
+                @include mq() {
+                    font-size: 2.5rem;
+                }
+            }
+
+            &-small {
+                font-size: 1rem;
+                font-size: 1.2rem;
+                @include mq() {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &__representative  {
+
+        }
+    }
+
+    &__content {
+        margin-top: 40px;
+        width: 50%;
+        
+        @include mq() {
+            border: 1px solid $main-color;
+            padding: 20px 10px;
+        }
+
+        @include mq() {
+            width: 100%;
+        }
+
+        &__top {
+            
+            position: relative;
+            margin-bottom: 20px;
+        
+            &-message {
+                width: 100%;
+                padding: 12px;
+                text-align: right;
+                background: linear-gradient(left , #EFEFEF 75% , #000 25%);
+                color: #fff;
+                background: linear-gradient(left , #EFEFEF 55% , #000 45%);
+                @include mq() {
+
+                }
+            }
+        }
+        
+        &__comment {
+            padding: 10px 30px;
+            @include mq() {
+                padding: 0 10px;
+            }
+            &__ttl {
+                margin-top: 40px;
+                font-size: 28px;
+                text-align: center;
+                margin-bottom: 20px;
+                position: relative;
+
+                @include mq() {
+                    margin-bottom: 30px;
+                }
+
+                &::before,&::after {
+                    position: absolute;
+                    content: "";
+                    width: 100px;
+                    height: 2px;
+                    background: #000;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    @include mq() {
+                        width: 40px;
+                    }
+                }
+
+                &::before {
+                    left: 20px;
+                }
+
+                &::after {
+                    right: 20px;
+                }
+            }
+    
+            &__txt {
+                font-size: 16px;
+                margin-bottom: 16px;
+
+                @include mq() {
+                    
+                }
+    
+                strong {
+                    font-size: 20px;
+                }
+            }
+    
+            &__img {
+    
+                &-top {
+    
+                }
+    
+                &-bottom {
+    
+                }
+            }
+    
+        }
+    }
+
+
+
+    
+}

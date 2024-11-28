@@ -25,9 +25,7 @@
             clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
         }
 
-        &::after {
-            
-        }
+
         
         // 奇数のとき
         &:nth-child(odd) {
@@ -184,7 +182,12 @@
                 }
 
                 img {
-                    transform: scale(-1, 1);
+                    // transform: scale(-1, 1);
+
+                    // width: 0; /* 初期状態: 幅を0にする */
+                    height: auto; /* 画像の高さは保持 */
+                    overflow: hidden;
+                    transition: none;
                 }
             }
 

@@ -53,10 +53,11 @@
         padding-bottom: 80px;
 
         @include mq() {
-            font-size: 32px;
+            font-size: 24px;
             margin: 8px;
             width: calc(100% / 2 - 16px);
             height: auto;
+            padding-bottom: 80px;
         }
         &:nth-child(4n + 1) {
             margin: 20px;
@@ -74,10 +75,10 @@
             width: 100%;
             background: #1B435D;
             position: relative;
-            padding: 120px 0;
+            padding: 60px 0;
 
             @include mq() {
-                height: 100px;
+                padding: 10px 0;
             }
             &::after {
                 position: absolute;
@@ -91,6 +92,7 @@
 
                 @include mq() {
                     clip-path: polygon(0 0, 100% 0, 100% 0, 0 60%);
+                    height: 100px;
                 }
             }
 

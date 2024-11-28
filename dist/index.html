@@ -1,25 +1,10 @@
-<!DOCTYPE html>
+z<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">  
   <meta prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:url" content="サイトURLを入力してください">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="シェアされた時用のタイトルを記述してください（titleタグと同じ内容でもOK）">
-  <meta property="og:site_name" content="サイトの名前を入力してください">
-  <meta property="og:image" content="シェアされた時に表示される画像を完全装飾パスで記入してください">
-  <meta property="og:image:width" content="600（画像の横サイズを指定してください）">
-  <meta property="og:image:height" content="315（画像の縦サイズを指定してください）">
-  <meta property="og:description" content="シェアされた時の目だディスクリプションを入力してください">
-  
-  <meta property="fb:app:id" content="438366794832991">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@rearise_kouhou（Wwitterアカウント名を記述してください）">
-
+  <link rel="stylesheet" href="https://use.typekit.net/ego1ter.css">
   <meta name="description" content="サイトのメタディスクリプションを入力してください">
   <title>Success_field</title>
   
@@ -32,12 +17,12 @@
 <body>
   <header class="header">
     <div class="header__wrap">
-      <h1 class="header__site__name"><a href="#">Success Field</a></h1>
+      <h1 class="header__site__name"><a href="#" id="logo">Success Field</a></h1>
       <nav class="header__nav">
         <ul class="header__items">
-          <li class="header__item"><a href="#">サービス</a></li>
-          <li class="header__item"><a href="#">代表挨拶</a></li>
-          <li class="header__item"><a href="#">会社概要</a></li>
+          <li class="header__item"><a href="./index.html">サービス</a></li>
+          <li class="header__item"><a href="./greeting-page.html">代表挨拶</a></li>
+          <li class="header__item"><a href="./about-page.html">会社概要</a></li>
           <li class="header__item"><a href="#">お問い合わせ</a></li>
         </ul>
       </nav>
@@ -75,16 +60,8 @@
     </div>
   </section>
 
-
-  
-
   <section class="greeting">
-    <div class="greeting__wrapper">
-      <div class="greeting__pickUp">
-        <p class="greeting__pickUp__txt"><span>大手</span>携帯販売代理店で</p>
-        <p class="greeting__pickUp__txt"><span>6ヶ月連続</span>MNP販売数<span>1位!!</span></p>
-      </div>
-      
+    <div class="greeting__wrapper">      
       <div class="greeting__flex">
         <div class="greeting__content">
           <h2 class="greeting__ttl">代表からの <span>- ひとこと -</span></h2>
@@ -155,24 +132,23 @@
       <div class="business__wrapper">
         <ul class="business__lists">
           <li class="business__list" id="event">
-            <div class="business__list__wrap fade-in-img">
+            <div class="business__list__wrap fade-in">
               <div class="business__list__wrap__left">
                 <h2 class="business__list__wrap__ttl">イベント企画</h2>
                 <p class="business__list__wrap__sttl">Event Planning</p>
                 <div class="business__list__wrap__img">
                   <img src="./assets/images/service/sccess-service-image07.jpg" alt="aaaa">
-                  <span>View More<strong>→</strong></span>
                 </div>
 
               </div>
             </div>
 
             <div class="business__list__wrap__right">
-              <h3 class="business__list__wrap__right__sttl width-expand">イベント催事のプロフェッショナルがお手伝い</h3>
-              <p class="business__list__wrap__right__txt width-expand">
+              <h3 class="business__list__wrap__right__sttl fade-up">イベント催事のプロフェッショナルがお手伝い</h3>
+              <p class="business__list__wrap__right__txt fade-up">
                 <strong>大手携帯販売代理店で6ヶ月連続MNP販売数1位</strong>を誇る、大型ショッピングモールでの役職・販売経験を持つスタッフが、実績をもとに会社様のお役に立ちます。
             </p>
-              <p class="business__list__wrap__right__txt width-expand">
+              <p class="business__list__wrap__right__txt fade-up">
                 <strong>携帯電話</strong>（Softbank、Y!mobile、au、UQ mobile、docomo）などのイベントクローザーやキャッチャーの手配はもちろん、<strong>イベント企画</strong>など全てを<strong>ワンストップ</strong>で行います。
             </p>
             </div>
@@ -181,26 +157,25 @@
           </li>
 
           <li class="business__list" id="consulting">
-            <div class="business__list__wrap fade-in-img">
+            <div class="business__list__wrap fade-in">
               <div class="business__list__wrap__left">
-                <h2 class="business__list__wrap__ttl width-expand">BtoBコンサルティング </h2>
-                <p class="business__list__wrap__sttl width-expand">B2B Consulting</p>
+                <h2 class="business__list__wrap__ttl fade-up">BtoBコンサルティング </h2>
+                <p class="business__list__wrap__sttl fade-up">B2B Consulting</p>
                 <div class="business__list__wrap__img">
                   <img src="./assets/images/service/sccess-service-image04.jpg" alt="aaaa">
-                  <span>View More<strong>→</strong></span>
                 </div>
 
               </div>
             </div>
 
             <div class="business__list__wrap__right">
-              <h3 class="business__list__wrap__right__sttl width-expand">店舗コンサル</h3>
-              <p class="business__list__wrap__right__txt width-expand">
+              <h3 class="business__list__wrap__right__sttl fade-up">店舗コンサル</h3>
+              <p class="business__list__wrap__right__txt fade-up">
                 <strong>大型インショップで年間獲得評価ポイント最多賞</strong>、<strong>月間MNP獲得数全国1位</strong>や
                 <strong>Bランク、Cランクロードサイド店舗を6ヶ月間連続Sランク獲得</strong>の経験などを持つスタッフが、
                 店舗の問題点を<strong>多角的な角度から</strong>問題解決のサポートを致します。
             </p>
-            <p class="business__list__wrap__right__txt width-expand">
+            <p class="business__list__wrap__right__txt fade-up">
                 偉そうに指示ではなく、<strong>一緒に現場で解決</strong>がモットーです。
             </p>
             
@@ -209,19 +184,18 @@
           </li>
 
           <li class="business__list" id="mobile">
-            <div class="business__list__wrap fade-in-img">
+            <div class="business__list__wrap fade-in">
               <div class="business__list__wrap__left">
-                <h2 class="business__list__wrap__ttl width-expand">携帯電話事業</h2>
-                <p class="business__list__wrap__sttl width-expand">Mobile Phone</p>
+                <h2 class="business__list__wrap__ttl fade-up">携帯電話事業</h2>
+                <p class="business__list__wrap__sttl fade-up">Mobile Phone</p>
                 <div class="business__list__wrap__img">
                   <img src="./assets/images/service/sccess-service-image01.jpg" alt="aaaa">
-                  <span>View More<strong>→</strong></span>
                 </div>
               </div>
             </div>
             <div class="business__list__wrap__right">
-              <h3 class="business__list__wrap__right__sttl width-expand">お客様の使用状況に応じた最適な料金プランのご提案</h3>
-              <p class="business__list__wrap__right__txt width-expand">
+              <h3 class="business__list__wrap__right__sttl fade-up">お客様の使用状況に応じた最適な料金プランのご提案</h3>
+              <p class="business__list__wrap__right__txt fade-up">
                 <strong>お得な機種の買い方やデータ移行</strong>などの使い方スマートフォンでのお困りごとまで幅広くご対応致します。
               </p>
             </div>
@@ -229,20 +203,19 @@
           </li>
 
           <li class="business__list" id="door-to-door">
-            <div class="business__list__wrap fade-in-img">
+            <div class="business__list__wrap fade-in">
               <div class="business__list__wrap__left">
-                <h2 class="business__list__wrap__ttl width-expand">訪問販売</h2>
-                <p class="business__list__wrap__sttl width-expand">Door-to-Door Sales</p>
+                <h2 class="business__list__wrap__ttl fade-up">訪問販売</h2>
+                <p class="business__list__wrap__sttl fade-up">Door-to-Door Sales</p>
                 <div class="business__list__wrap__img">
                   <img src="./assets/images/service/sccess-service-image03.jpg" alt="aaaa">
-                  <span>View More<strong>→</strong></span>
                 </div>
 
               </div>
             </div>
             <div class="business__list__wrap__right">
-              <h3 class="business__list__wrap__right__sttl width-expand">お客様のご家庭の状況に応じたサービスの提供を致します。</h3>
-              <p class="business__list__wrap__right__txt width-expand">
+              <h3 class="business__list__wrap__right__sttl fade-up">お客様のご家庭の状況に応じたサービスの提供を致します。</h3>
+              <p class="business__list__wrap__right__txt fade-up">
                 <strong>通信料、保険料、引越し、車の買い替え</strong>など、ご家庭でのお困り事に提携先と<strong>素早く連携</strong>し、
                 <strong>お得なご提案</strong>をさせて頂きます。
             </p>
@@ -252,22 +225,21 @@
           </li>
 
           <li class="business__list" id="various">
-            <div class="business__list__wrap fade-in-img">
+            <div class="business__list__wrap fade-in">
               <div class="business__list__wrap__left">
-                <h2 class="business__list__wrap__ttl width-expand">各種仲介</h2>
-                <p class="business__list__wrap__sttl width-expand">Various Brokerage Services</p>
+                <h2 class="business__list__wrap__ttl fade-up">各種仲介</h2>
+                <p class="business__list__wrap__sttl fade-up">Various Brokerage Services</p>
                 <div class="business__list__wrap__img">
                   <img src="./assets/images/service/sccess-service-image02.jpg" alt="aaaa">
-                  <span>View More<strong>→</strong></span>
                 </div>
               </div>
             </div>
             <div class="business__list__wrap__right">
-              <h3 class="business__list__wrap__right__sttl width-expand">幅広くアライアンス様の売り上げを貢献</h3>
-              <p class="business__list__wrap__right__txt width-expand">
+              <h3 class="business__list__wrap__right__sttl fade-up">幅広くアライアンス様の売り上げを貢献</h3>
+              <p class="business__list__wrap__right__txt fade-up">
                 <strong>保険、不動産、車、工務店</strong>など幅広い提携先様の<strong>売上アップ</strong>に貢献させて頂きます。
             </p>
-            <p class="business__list__wrap__right__txt width-expand">
+            <p class="business__list__wrap__right__txt fade-up">
                 悪徳な業者様は<strong>提携致しません</strong>ので、<strong>ご安心頂けます！</strong>
             </p>
             
@@ -278,26 +250,25 @@
           
           
           <li class="business__list" id="coating">
-            <div class="business__list__wrap fade-in-img">
+            <div class="business__list__wrap fade-in">
               <div class="business__list__wrap__left">
-                <h2 class="business__list__wrap__ttl width-expand">各種コーティング </h2>
-                <p class="business__list__wrap__sttl width-expand">Coating Services</p>
+                <h2 class="business__list__wrap__ttl fade-up">各種コーティング </h2>
+                <p class="business__list__wrap__sttl fade-up">Coating Services</p>
                 <div class="business__list__wrap__img">
                   <img src="./assets/images/service/sccess-service-image05.jpg" alt="aaaa">
-                  <span>View More<strong>→</strong></span>
                 </div>
               </div>
             </div>
 
             <div class="business__list__wrap__right">
-              <h3 class="business__list__wrap__right__sttl width-expand">ブランド・水回りコーティング</h3>
-              <p class="business__list__wrap__right__txt width-expand">
+              <h3 class="business__list__wrap__right__sttl fade-up">ブランド・水回りコーティング</h3>
+              <p class="business__list__wrap__right__txt fade-up">
                 あなたの大切な<strong>ブランド物</strong>や、ご自宅の水まわり（<strong>シンク、コンロ、バスルーム、トイレなど</strong>）をガラスコーティングでしっかりと<strong>傷や汚れ</strong>から守ります！
             </p>
-            <p class="business__list__wrap__right__txt width-expand">
+            <p class="business__list__wrap__right__txt fade-up">
                 さらに、<strong>スマートフォンやスマートウォッチ</strong>もコーティングすることで、割れやひびといった<strong>不意のトラブル</strong>から守ることができます。
             </p>
-            <p class="business__list__wrap__right__txt width-expand">
+            <p class="business__list__wrap__right__txt fade-up">
                 コーティング技術で、あなたの大切なものをより長く美しく保ちましょう。
             </p>
             
@@ -376,6 +347,6 @@
   <script src="./assets/js/base.min.js" defer="defer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/fade-in.js"></script>
+  <script type="module" src="./assets/js/fade-in.js"></script>
 </body>
 </html> 

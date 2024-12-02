@@ -44,89 +44,69 @@
     </ul>
   </div>
 
-
   <div class="global__bg"></div>
 
   
 
   <main class="main">
-    <section class="about">
-            <div class="about__area">
-                <span class="about__sttl">COMPANY INFO</span>
-                <h2 class="about__ttl">会社概要</h2>
+
+    <section class="contactTop">
+            <div class="contactTop__area">
+                <span class="contactTop__sttl">Contact</span>
+                <h2 class="contactTop__ttl">お問合せ</h2>
             </div>
     </section>
 
-    <div class="about__wrapper">
-        <div class="about__content">
-
-            <dl class="about__dl">
-                <dt class="about__dt">会社名</dt>
-                <dd class="about__dd">合同会社SUCCESS FIELD</dd>
-            </dl>
-            <dl class="about__dl">
-                <dt class="about__dt">設立</dt>
-                <dd class="about__dd">2024年6月</dd>
-            </dl>
-            <dl class="about__dl">
-                <dt class="about__dt">代表者</dt>
-                <dd class="about__dd">
-                    <p>成田 智茂</p>
-                    <p>NARITA TOMOSHIGE</p>
-                </dd>
-            </dl>
-            <dl class="about__dl">
-                <dt class="about__dt">資本金</dt>
-                <dd class="about__dd">〇〇万円（2024年〇〇月末時点）</dd>
-            </dl>
-            <dl class="about__dl">
-                <dt class="about__dt">事業内容</dt>
-                <dd class="about__dd">
-                    <p>イベント企画</p>
-                    <p>BtoBコンサルティング</p>
-                    <p>携帯電話事業</p>
-                    <p>訪問販売</p>
-                    <p>各種仲介</p>
-                    <p>各種コーティング</p>
-                </dd>
-            </dl>
-            <dl class="about__dl">
-                <dt class="about__dt">住所</dt>
-                <dd class="about__dd">
-                    <p>大阪府大阪市中央区南船場3-2-22</p>
-                    <p>おおきに南船場ビル205</p>
-                </dd>
-            </dl>
-            <dl class="about__dl">
-                <dt class="about__dt">主要取引先</dt>
-                <dd class="about__dd">
-                    <p>ソフトバンク株式会社</p>
-                    <p>イオンリテール株式会社</p>
-                    <p>株式会社ヒロホールディングス</p>
-                    <p>株式会社I's</p>
-                    <p>株式会社TMW PRODUCTIONS</p>
-                    <p>株式会社NOW TRY</p>
-                    <p>SND社会保険労務士事務所</p>
-                    <p>佐藤恵税理士事務所</p>
-                </dd>
-            </dl>
+    <div class="contact">
+      <p class="contact__announcement">
+        SUCCESS FIELEDへのお問い合わせは下記おフォーム、または電話にて承っております。
+      </p>
+      <p class="contact__link">電話番号 : <a href="tel:">000-0000-0000</a></p>
+      <form action="" method="post" class="contact__form">
+        <div class="contact__form__element">
+          <label for="jobs">お仕事内容</label>
+          <select name="jobs" id="jobs" aria-selected="false">
+            <option value="求人関連">----</option>
+            <option value="求人関連">求人関連</option>
+            <option value="コーティング">コーティング</option>
+            <option value="コンサル依頼">コンサル依頼</option>
+            <option value="協業・打ち合わせ">協業・打ち合わせ</option>
+          </select>
+        </div>
+        <div class="contact__form__element">
+          <label for="user_name">氏名</label>
+          <input type="text" id="user_name" name="user_name" required>
+        </div>
+        <div class="contact__form__element">
+          <label for="user_mail">メールアドレス</label>
+          <input type="email" id="user_mail" required>
+        </div>
+        <div class="contact__form__element">
+          <p>性別</p>
+          <div class="contact__form__gender">
+            <label><input type="radio" name="gender" value="男性">男性</label>
+            <label><input type="radio" name="gender" value="女性">女性</label>
+          </div>
+        </div>
+        <div class="contact__form__element">
+          <label for="memo">お問合せ詳細</label>
+          <textarea name="memo" id="memo"></textarea>
+        </div>
+        <div class="contact__form__submit">
+          <input type="submit" value="送信確認">
         </div>
 
+        
+      </form>
     </div>
-
-
   </main>
 
 
+
   
-
-
   <footer class="footer">
     <p class="footer__copy">&copy;Success Field</p>
   </footer>
-  
-  
-
   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
   <script src="./assets/js/base.js" defer="defer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

@@ -4,13 +4,13 @@
 @use "../variable" as *;
 
 
-.about {
+.contactTop {
     padding: 120px 0 0;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     overflow: hidden;
 
     @include mq() {
-        margin-bottom: 80px;
+        
     }
     &__area {
         margin-left: 120px;
@@ -112,63 +112,116 @@
             margin: 20px;
         }
     }
+   
+}
 
-    &__content {
+.contact,.thanks {
 
-    }
-
-    &__dl {
-        display: flex;
-        flex-direction: row;
-        font-size: 24px;
-        position: relative;
-        padding-bottom: 40px;
-        margin-bottom: 80px;
-        font-weight: bold;
+    &__announcement {
+        text-align: center;
+        width: 555px;
+        margin: 0 auto;
+        font-size: 18px;
 
         @include mq() {
-            flex-direction: column;
-            margin-bottom: 40px;
+            width: 350px;
+            font-size: 14px;
         }
-        &::after {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background: #000;
+    }
 
-            @include mq() {
-            
+    &__link {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 80px;
+        font-weight: bold;
+        @include mq() {
+            margin-top: 40px;
+        }
+    }
+
+    &__form {
+        width: 60%;
+        margin: 85px auto;
+
+        @include mq() {
+            width: 80%;
+            margin: 40px auto;
+        }
+        &__element {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            label {
+                margin-bottom: 22px;
+                border-radius: 4px;
+                font-size: 18px;
+                @include mq() {
+                    margin-bottom: 16px;
+                    font-size: 18px;
+                }
+            }
+
+            input,select {
+                margin-bottom: 22px;
+                padding: 20px;
+                border-radius: 4px;
+                border: 1px solid #333;
+                @include mq() {
+                    padding: 10px;
+                    margin-bottom: 16px;
+                }
+            }
+
+            textarea {
+                height: 200px;
+                border-radius: 4px;
             }
         }
+
+        &__gender {
+            margin-top: 27px;
+            margin-bottom: 27px;
+            label {
+                margin-left: 30px;
+            }
+        }
+
+        &__submit {
+            text-align: center;
+            margin-top: 60px;
+
+            @include mq() {
+                margin-top: 24px;
+            }
+        }
+
     }
 
-    &__dt {
-        width: 500px;
-        @include mq() {
-            width: 100%;
-            margin-bottom: 40px;
-        }
-        
+    &__radio {
 
     }
 
-    &__dd {
-        width: calc(100% - 500px);
-        font-weight: normal;
 
-        @include mq() {
-            width: 100%;
-        }
-        p {
-            margin-bottom: 40px;
-        }
+}
 
+input[type="submit"] {
+    padding: 20px;
+    width: 304px;
+    display: inline-block;
+    background: $main-color;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+
+    @include mq() {
+        padding: 10px;
+        width: 150px;
     }
 }
 
 
-
+.thanks {
+    margin-bottom: 300px;
+}
     

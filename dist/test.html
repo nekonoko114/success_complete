@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">  
+  <meta prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Success_field</title>
+  
+  <link href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="//unpkg.com/swiper@8/swiper-bundle.min.css" rel="preload/">
+  <link rel="shortcut icon" href="./assets/images/logo/rzLogo.webp" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+  <script src="https://kit.fontawesome.com/cd7cddf20f.js" crossorigin="anonymous" rel="preload"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer="defer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer="defer"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__wrap">
+      <h1 class="header__site__name"><a href="./index.html">Success Field</a></h1>
+      <nav class="header__nav">
+        <ul class="header__items">
+          <li class="header__item"><a href="./index.html">サービス</a></li>
+          <li class="header__item"><a href="./greeting-page.html">代表挨拶</a></li>
+          <li class="header__item"><a href="./about-page.html">会社概要</a></li>
+          <li class="header__item"><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="global">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="global__menu">
+    <ul class="global__items">
+      <li class="global__item"><a href=""><h2 class="site__name"><span class="site__name-white">Success</span><span class="site__name-rich">Field</span></h2></a></li>
+      <li class="global__item is-active"><a href="./index.html">サービス</a></li>
+      <li class="global__item"><a href="./greeting-page.html">代表挨拶</a></li>
+      <li class="global__item"><a href="./about-page.html">会社概要</a></li>
+      <li class="global__item"><a href="./contact.html">お問い合わせ</a></li>
+    </ul>
+  </div>
+
+  <div class="global__bg"></div>
+
+  
+
+
+  <div class="container">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+  </div>
+
+  <style>
+
+    .container {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+    .box {
+        width: 380px;
+        height: 800px;
+          position: relative;
+    }
+
+    .box1 {
+        background: red;
+    }
+
+    .box2 {
+        background: green;
+    }
+    .box3 {
+        background: orange;
+    }
+    .box4 {
+        background: yellow;
+    }
+    .box5 {
+        background: blue;
+    }
+    
+  </style>
+
+<script>
+    // GSAPアニメーション
+    document.addEventListener('DOMContentLoaded', () => {
+        // 初期状態: すべての.box要素を画面外（右）に配置
+        gsap.set(".box", { x: "100vw" });
+
+        // アニメーションの実行
+        gsap.to(".box", {
+            x: "0%", // 画面内に移動
+            stagger: 0.3, // 次の要素がアニメーションを開始するまでの遅延
+            duration: 1, // アニメーションの長さ
+            ease: "power3.out" // スムーズな動き
+        });
+    });
+</script>
+
+
+  
+  <footer class="footer">
+    <p class="footer__copy">&copy;Success Field</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script src="./assets/js/base.js" defer="defer"></script>
+  <script src="./assets/js/fade-in.js"></script>
+</body>
+</html> 
